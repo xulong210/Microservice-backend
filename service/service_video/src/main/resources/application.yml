@@ -1,0 +1,20 @@
+server:
+  port: 8003
+spring:
+  application:
+    name: service-video
+  profiles:
+    active: dev
+  servlet:
+    multipart:
+      max-file-size: 512MB
+      max-request-size: 512MB
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+aliyun:
+  video:
+    file:
+      keyid: LTAI5tL87VHU2itGxpUMaDFj
+      keysecret: SYvKcL0V55nUXupS7sIl0ThAoPkImE

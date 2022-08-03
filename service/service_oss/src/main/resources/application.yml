@@ -1,0 +1,18 @@
+server:
+  port: 8002
+spring:
+  application:
+    name: service-oss
+  profiles:
+    active: dev
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+aliyun:
+  oss:
+    file:
+      endpoint: oss-cn-shanghai.aliyuncs.com
+      keyid: LTAI5tL87VHU2itGxpUMaDFj
+      keysecret: SYvKcL0V55nUXupS7sIl0ThAoPkImE
+      bucketname: edu-xulo

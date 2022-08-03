@@ -1,0 +1,39 @@
+server:
+  port: 8001
+spring:
+  application:
+    name: service-edu
+  profiles:
+    active: dev
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: xulong_123R
+    url: jdbc:mysql://localhost:3306/mooc?useSSL=false&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true
+  mvc:
+    servlet:
+      load-on-startup: 100
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+  redis:
+    host: 124.220.22.113
+    port: 6379
+    database: 0
+    timeout: 1800000
+    password: 123456
+    lettuce:
+      pool:
+        max-active: 20
+        max-wait: -1
+        max-idle: 5
+        min-idle: 0
+mybatis-plus:
+  mapper-locations: classpath:cn/xu/eduservice/mapper/xml/*.xml
+feign:
+  hystrix:
+    enabled: true

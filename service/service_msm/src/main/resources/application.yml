@@ -1,0 +1,37 @@
+server:
+  port: 8004
+
+spring:
+  application:
+    name: service-msm
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: xulong_123R
+    url: jdbc:mysql://localhost:3306/mooc?useSSL=false&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true
+  redis:
+    host: 124.220.22.113
+    port: 6379
+    database: 0
+    timeout: 1800000
+    password: 123456
+    lettuce:
+      pool:
+        max-active: 20
+        max-wait: -1
+        max-idle: 5
+        min-idle: 0
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+txyun:
+  msm:
+    signId: 452728
+    singName: xulo的知识小屋
+    templateId: 1362546
+    templateContext: 您正在申请手机注册，验证码为：{1}，1分钟内有效！
+    appId: 1400659502
+    appKey: 7c19127617ffc37f01ffe5d5081fcbf7
+    secretId: AKID5ze29zYqsd6IEsFK8gxxg9LGtGMBj01l
+    secretKey: TfbGeuud5GAn9D0XnmUw83h4B0YppYz9
